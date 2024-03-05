@@ -1,0 +1,28 @@
+@import "../abstracts/variables";
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  background-color: $black-blue;
+  color: $white;
+  font-size: $fz-button;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid $white;
+  border-radius: $br-normal;
+  cursor: pointer;
+  transition: background-color $transition-speed ease;
+
+  &:hover {
+    background-color: $blue-grey;
+  }
+}
+
+a.button {
+  line-height: 1.2em;
+
+  &:hover {
+    color: $white;
+  }
+}

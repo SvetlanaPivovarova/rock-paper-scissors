@@ -10,9 +10,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      score: 0
+  props: {
+    score: {
+      type: Number,
+      default: 0
     }
   }
 }
