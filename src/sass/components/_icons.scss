@@ -1,0 +1,42 @@
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+
+  &-close {
+    background-image: url("/src/assets/icons/icon-close.svg");
+  }
+
+  &-lizard {
+    background-image: url("/src/assets/icons/icon-lizard.svg");
+  }
+
+  &-paper {
+    background-image: url("/src/assets/icons/icon-paper.svg");
+  }
+
+  &-rock {
+    background-image: url("/src/assets/icons/icon-rock.svg");
+  }
+
+  &-scissors {
+    background-image: url("/src/assets/icons/icon-scissors.svg");
+  }
+
+  &-spoke {
+    background-image: url("/src/assets/icons/icon-spoke.svg");
+  }
+
+  &-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+

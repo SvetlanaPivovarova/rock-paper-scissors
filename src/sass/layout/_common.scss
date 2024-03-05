@@ -1,0 +1,42 @@
+@import "../abstracts/variables";
+
+.container {
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 10px;
+
+  @media #{$media-tablet} {
+    width: 480px;
+    padding: 0 18px;
+  }
+
+  @media #{$media-laptop} {
+    width: 768px;
+    padding: 0 20px;
+  }
+
+  @media #{$media-desktop} {
+    width: 945px;
+    padding: 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.lh-medium {
+  line-height: 1.4;
+}
+
+
+
+

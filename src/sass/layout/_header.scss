@@ -1,0 +1,28 @@
+@import "../abstracts/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $border-grey;
+  border-radius: $br-large;
+  padding: 10px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  background: $white;
+  border-radius: $br-normal;
+  color: $text-blue;
+  padding: 1rem;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+
+  &__digital {
+    color: $black-blue;
+    font-size: 40px;
+  }
+}
