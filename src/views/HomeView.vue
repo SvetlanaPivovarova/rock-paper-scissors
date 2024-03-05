@@ -1,13 +1,16 @@
 <template>
   <Header :score="score" />
   <button class="button">Бонус</button>
-  <game-button choice="paper" />
-  <game-button choice="rock" />
-  <game-button choice="scissors" />
+  <game-button v-for="item in selections"
+               :key="item.id"
+               :choice="item.id"
+               @picked="pickedButton = $event"
+  />
 </template>
 <script>
 import Header from "@/components/Header.vue";
 import GameButton from "@/components/GameButton.vue";
+import { selectionOptions } from "@/utils/constants.js";
 
 export default {
   components: {
@@ -16,7 +19,14 @@ export default {
   },
   data() {
     return {
-      score: 0
+      score: 0,
+      selections: selectionOptions,
+      pickedButton: null
+    }
+  },
+  watch: {
+    'pickedButton'() {
+      console.log(this.pickedButton)
     }
   }
 }
