@@ -70,7 +70,7 @@ $br-small: 4px;
 $transition-speed: .3s;
 
 /* Media Query breakpoints */
-$media-mobile: "(max-width: 480px)";
+$media-mobile: "(min-width: 400px)";
 $media-tablet: "(min-width: 481px)";
 $media-laptop: "(min-width: 769px)";
 $media-desktop: "(min-width: 1025px)";

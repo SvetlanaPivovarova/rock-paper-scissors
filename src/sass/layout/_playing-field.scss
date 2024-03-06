@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   min-height: 320px;
   width: 320px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   padding: 20px 10px;
   position: relative;
 
@@ -16,16 +16,28 @@
 
   .game-button__label_type_rock {
     left: 106px;
-    bottom: 45px;
+    bottom: 55px;
+
+    @media #{$media-mobile} {
+      bottom: 45px;
+    }
   }
 
   .game-button__label_type_paper {
-    left: -10px;
+    left: 10px;
     top: -20px;
+
+    @media #{$media-mobile} {
+      left: -10px;
+    }
   }
 
   .game-button__label_type_scissors {
-    right: -10px;
+    right: 10px;
     top: -20px;
+
+    @media #{$media-mobile} {
+      right: -10px;
+    }
   }
 }

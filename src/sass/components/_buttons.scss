@@ -3,8 +3,6 @@
 .button {
   display: inline-block;
   padding: 10px;
-  background-color: $black-blue;
-  color: $white;
   font-size: $fz-button;
   text-align: center;
   text-transform: uppercase;
@@ -14,8 +12,24 @@
   cursor: pointer;
   transition: background-color $transition-speed ease;
 
-  &:hover {
-    background-color: $blue-grey;
+  &_primary {
+    background-color: $black-blue;
+    color: $white;
+
+
+    &:hover {
+      background-color: $blue-grey;
+    }
+  }
+
+  &_secondary {
+    background-color: $white;
+    color: $blue-grey;
+
+
+    &:hover {
+      background-color: $grey-500;
+    }
   }
 }
 

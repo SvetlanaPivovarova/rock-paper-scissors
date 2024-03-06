@@ -24,7 +24,7 @@ export default {
   },
   watch: {
     'pickedButton'() {
-      console.log(this.pickedButton)
+      this.$emit('pickedButton', this.pickedButton)
     }
   }
 }
