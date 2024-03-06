@@ -29,7 +29,6 @@ export default {
   watch: {
     'picked'() {
       this.$emit('picked', this.choice)
-      console.log(this.choice)
     }
   }
 }

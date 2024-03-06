@@ -1,0 +1,31 @@
+@import "../abstracts/variables";
+
+.playing-field {
+  background-image: url("src/assets/images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  min-height: 320px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  position: relative;
+
+
+  .game-button__label {
+    position: absolute;
+  }
+
+  .game-button__label_type_rock {
+    left: 106px;
+    bottom: 45px;
+  }
+
+  .game-button__label_type_paper {
+    left: -10px;
+    top: -20px;
+  }
+
+  .game-button__label_type_scissors {
+    right: -10px;
+    top: -20px;
+  }
+}
