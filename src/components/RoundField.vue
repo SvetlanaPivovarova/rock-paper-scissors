@@ -2,7 +2,7 @@
   <section class="round-field">
     <div class="round-field__wrapper">
       <p>Вы выбрали</p>
-      <game-button :choice="playerChoice" />
+      <game-button :choice="playerChoice" size="large" />
     </div>
     <div class="round-field__result">
       <p v-if="playerWon">Вы выиграли</p>

@@ -1,7 +1,7 @@
 <template>
-  <label class="game-button">
+  <label :class="gameButtonClass">
     <input type="radio" :id="choice" :value="choice" v-model="picked" />
-    <span :class="gameButtonClass(choice)">
+    <span :class="gameButtonSpanClass(choice)">
       <span class="game-button__inner">
         <span class="icon"></span>
       </span>
@@ -14,6 +14,10 @@ export default {
   props: {
     choice: {
       type: String,
+    },
+    size: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -22,13 +26,18 @@ export default {
     }
   },
   methods: {
-    gameButtonClass(choice) {
+    gameButtonSpanClass(choice) {
       return `game-button__label game-button__label_type_${choice}`
     }
   },
   watch: {
     'picked'() {
       this.$emit('picked', this.choice)
+    }
+  },
+  computed: {
+    gameButtonClass() {
+      return this.size ? `game-button game-button_size_${this.size}` : 'game-button'
     }
   }
 }
