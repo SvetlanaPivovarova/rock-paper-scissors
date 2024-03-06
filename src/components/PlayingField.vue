@@ -24,7 +24,8 @@ export default {
   },
   watch: {
     'pickedButton'() {
-      this.$emit('pickedButton', this.pickedButton)
+      this.$emit('pickedButton', this.pickedButton);
+      this.$emit('checkResult')
     }
   }
 }

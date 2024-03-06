@@ -70,8 +70,7 @@ export default {
     play() {
       this.playerWon = false;
       this.deadHeat = false;
-      this.computerChoice = this.makeMoveForComputer();
-      this.refereeGame();
+      this.$emit('playAgain')
     }
   }
 }

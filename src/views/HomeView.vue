@@ -1,7 +1,13 @@
 <template>
   <header-default :score="store.count" />
-  <playing-field @pickedButton="choice = $event"/>
-  <round-field :player-choice="choice" @increase="store.increment()" @decrease="store.decrement()"/>
+  <playing-field v-if="startGame" @pickedButton="choice = $event" @checkResult="toggle"/>
+  <round-field
+      v-if="!startGame"
+      :player-choice="choice"
+      @increase="store.increment()"
+      @decrease="store.decrement()"
+      @playAgain="toggle"
+  />
   <footer-default />
 </template>
 
@@ -15,13 +21,10 @@ import {useScoreStore} from "@/stores/score.js";
 
 const store = useScoreStore();
 const choice = ref(null);
+const startGame = ref(true);
 
-
-//function increaseScore() {
-////}
-
-//function decreaseScore() {
-//  this.score--;
-//}
+const toggle = () => {
+  startGame.value = !startGame.value;
+}
 
 </script>
