@@ -2,7 +2,7 @@
 
 Классическая игра в "Камень, ножницы, бумага" против компьютера.
 
-![Иллюстрация к проекту](https://github.com/SvetlanaPivovarova/rocks-paper-scissprs/raw/master/src/assets/images/game.png)
+![Иллюстрация к проекту](https://github.com/SvetlanaPivovarova/rock-paper-scissors/blob/main/src/assets/images/main.png)
 
 ## Project Setup
 
