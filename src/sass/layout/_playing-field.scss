@@ -1,7 +1,7 @@
-@import "../abstracts/variables";
+@import '../abstracts/variables';
 
 .playing-field {
-  background-image: url("src/assets/images/bg-triangle.svg");
+  background-image: url('src/assets/images/bg-triangle.svg');
   background-repeat: no-repeat;
   min-height: 320px;
   width: 320px;
@@ -12,7 +12,6 @@
   @media #{$media-mobile} {
     margin-top: 60px;
   }
-
 
   .game-button__label {
     position: absolute;

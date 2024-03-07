@@ -7,6 +7,10 @@
       <li>Камень побеждает ножницы</li>
       <li>Ножницы побеждают бумагу</li>
     </ul>
-    <img class="article__image" src="../assets/images/image-rules.svg" alt="Изображение правил игры" />
+    <img
+      class="article__image"
+      src="../assets/images/image-rules.svg"
+      alt="Изображение правил игры"
+    />
   </article>
 </template>

@@ -1,4 +1,4 @@
-@import "../abstracts/variables";
+@import '../abstracts/variables';
 
 .button {
   display: inline-block;
@@ -16,7 +16,6 @@
     background-color: $black-blue;
     color: $white;
 
-
     &:hover {
       background-color: $blue-grey;
     }
@@ -25,7 +24,6 @@
   &_secondary {
     background-color: $white;
     color: $blue-grey;
-
 
     &:hover {
       background-color: $grey-500;

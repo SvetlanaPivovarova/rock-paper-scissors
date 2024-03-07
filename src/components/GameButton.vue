@@ -13,7 +13,7 @@
 export default {
   props: {
     choice: {
-      type: String,
+      type: String
     },
     size: {
       type: String,
@@ -35,18 +35,18 @@ export default {
     }
   },
   watch: {
-    'picked'() {
+    picked() {
       this.$emit('picked', this.choice)
     }
   },
   computed: {
     gameButtonClass() {
-      if(this.size) {
-        if(this.status) {
+      if (this.size) {
+        if (this.status) {
           return `game-button game-button_size_${this.size} game-button_${this.status}`
         } else return `game-button game-button_size_${this.size}`
       } else {
-        if(this.status) {
+        if (this.status) {
           return `game-button game-button_${this.status}`
         } else return `game-button`
       }

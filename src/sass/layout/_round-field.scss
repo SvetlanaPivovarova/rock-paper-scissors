@@ -1,4 +1,4 @@
-@import "../abstracts/variables";
+@import '../abstracts/variables';
 
 .round-field {
   display: flex;
@@ -40,7 +40,10 @@
     }
 
     .game-button_winner {
-      box-shadow:  0 0 0 20px rgba(83, 83, 116, 0.7), 0 0 0 40px rgba(83, 83, 116, 0.4),  0 0 0 60px rgba(83, 83, 116, 0.1);
+      box-shadow:
+        0 0 0 20px rgba(83, 83, 116, 0.7),
+        0 0 0 40px rgba(83, 83, 116, 0.4),
+        0 0 0 60px rgba(83, 83, 116, 0.1);
       border-radius: 50%;
     }
   }

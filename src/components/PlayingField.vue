@@ -1,16 +1,17 @@
 <template>
   <div class="playing-field">
-    <game-button v-for="item in selections"
-                 :key="item.id"
-                 :choice="item.id"
-                 @picked="pickedButton = $event"
+    <game-button
+      v-for="item in selections"
+      :key="item.id"
+      :choice="item.id"
+      @picked="pickedButton = $event"
     />
   </div>
 </template>
 
 <script>
-import GameButton from "./GameButton.vue";
-import { selectionOptions } from "@/utils/constants.js";
+import GameButton from './GameButton.vue'
+import { selectionOptions } from '@/utils/constants.js'
 
 export default {
   components: {
@@ -23,8 +24,8 @@ export default {
     }
   },
   watch: {
-    'pickedButton'() {
-      this.$emit('pickedButton', this.pickedButton);
+    pickedButton() {
+      this.$emit('pickedButton', this.pickedButton)
       this.$emit('checkResult')
     }
   }
