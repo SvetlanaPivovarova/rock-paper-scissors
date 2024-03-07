@@ -67,13 +67,13 @@ export default {
         this.computerChoice === selectionOptions[1].id
       ) {
         this.playerWon = true
-        this.$emit('increaseScore')
+        this.$emit('increase')
       } else if (
         this.playerChoice === selectionOptions[1].id &&
         this.computerChoice === selectionOptions[2].id
       ) {
         this.playerWon = true
-        this.$emit('increaseScore')
+        this.$emit('increase')
       } else if (
         this.playerChoice === selectionOptions[2].id &&
         this.computerChoice === selectionOptions[0].id
