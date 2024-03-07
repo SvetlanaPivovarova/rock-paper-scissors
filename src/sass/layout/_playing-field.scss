@@ -5,9 +5,13 @@
   background-repeat: no-repeat;
   min-height: 320px;
   width: 320px;
-  margin: 40px auto 0;
+  margin: 40px auto;
   padding: 20px 10px;
   position: relative;
+
+  @media #{$media-mobile} {
+    margin-top: 60px;
+  }
 
 
   .game-button__label {
