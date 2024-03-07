@@ -18,6 +18,10 @@ export default {
     size: {
       type: String,
       default: ''
+    },
+    status: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -37,7 +41,15 @@ export default {
   },
   computed: {
     gameButtonClass() {
-      return this.size ? `game-button game-button_size_${this.size}` : 'game-button'
+      if(this.size) {
+        if(this.status) {
+          return `game-button game-button_size_${this.size} game-button_${this.status}`
+        } else return `game-button game-button_size_${this.size}`
+      } else {
+        if(this.status) {
+          return `game-button game-button_${this.status}`
+        } else return `game-button`
+      }
     }
   }
 }

@@ -1,0 +1,20 @@
+@import "../abstracts/variables";
+
+.article {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  &__image {
+    margin: 20px auto;
+    max-width: 80%;
+  }
+}

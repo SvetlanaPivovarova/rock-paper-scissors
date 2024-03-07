@@ -1,13 +1,21 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <button class="button button_primary">Бонус</button>
-      <button class="button button_primary" @click="openModal">Правила</button>
+      <button class="button button_primary" @click="openBonusModal">Бонус</button>
+      <button class="button button_primary" @click="openRulesModal">Правила</button>
     </div>
   </footer>
-  <modal :show="showModal" @close="showModal = false" >
+  <modal :show="showRulesModal" @close="showRulesModal = false" >
     <template #body>
       <rules />
+    </template>
+  </modal>
+  <modal :show="showBonusModal" @close="showBonusModal = false" >
+    <template #body>
+      <article class="article">
+        <h2>Бонусная игра</h2>
+        <p>В будущем можно будет сыграть в «Камень, ножницы, бумагу, ящерицу, спока» против компьютера </p>
+      </article>
     </template>
   </modal>
 </template>
@@ -22,12 +30,16 @@ export default {
   },
   data() {
     return {
-      showModal: false
+      showRulesModal: false,
+      showBonusModal: false,
     }
   },
   methods: {
-    openModal() {
-      this.showModal = true;
+    openRulesModal() {
+      this.showRulesModal = true;
+    },
+    openBonusModal() {
+      this.showBonusModal = true;
     }
   }
 }

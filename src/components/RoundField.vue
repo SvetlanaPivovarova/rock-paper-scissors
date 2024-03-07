@@ -2,7 +2,7 @@
   <section class="round-field">
     <div class="round-field__wrapper">
       <p>Вы выбрали</p>
-      <game-button :choice="playerChoice" size="large" />
+      <game-button :choice="playerChoice" size="large" :status="playerWon && !deadHeat ? 'winner' : ''" />
     </div>
     <div class="round-field__result">
       <p v-if="playerWon">Вы выиграли</p>
@@ -11,8 +11,9 @@
       <button @click="play" class="button button_secondary">Играть снова</button>
     </div>
     <div class="round-field__wrapper">
+      <span class="winner"></span>
       <p>Компьютер выбрал</p>
-      <game-button :choice="computerChoice" />
+      <game-button :choice="computerChoice" size="large" :status="!playerWon && !deadHeat ? 'winner' : ''"/>
     </div>
   </section>
 </template>
@@ -34,7 +35,7 @@ export default {
       computerChoice: null,
       playerWon: null,
       deadHeat: false,
-      variantsQuantity: 3
+      variantsQuantity: 3,
     }
   },
   mounted() {
